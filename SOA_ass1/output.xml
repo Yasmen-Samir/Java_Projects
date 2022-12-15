@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Catalogue>
+    <Book ID="BK1">
+        <Author>a</Author>
+        <Title>t</Title>
+        <Genre>g</Genre>
+        <Price>22.0</Price>
+        <Publish_Date>2022</Publish_Date>
+        <Description>wesde</Description>
+    </Book>
+</Catalogue>
