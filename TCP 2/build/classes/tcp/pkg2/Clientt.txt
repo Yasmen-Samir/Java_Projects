@@ -1,0 +1,42 @@
+package tcp.pkg2;
+ 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.net.InetAddress;
+import java.net.Socket;
+import java.util.Scanner;
+
+
+public class Clientt  {
+    
+       public static void main(String[] args) {
+               
+        try {
+            InetAddress ip = InetAddress.getLocalHost();
+            System.out.println(ip);
+            Socket server = new Socket(ip, 22000);
+            DataInputStream otherReadSource = new DataInputStream(server.getInputStream());
+            DataOutputStream otherWriteSource = new DataOutputStream(server.getOutputStream());
+            
+            int n;
+            Scanner read = new Scanner(System.in);
+           
+            for(int i=0; i<10; i++)
+            {
+                System.out.print((i+1) + "'s number : " );
+                n = read.nextInt(); 
+                otherWriteSource.write(n);
+            
+            }
+            
+            
+        } catch (Exception ex) {
+            System.out.println("Error");
+        }
+    }
+}
+    
+
+
+    
+
